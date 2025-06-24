@@ -1,9 +1,5 @@
-Hier ist eine professionelle README.md Dokumentation für deine KsK Clan Webseite:
-
 ```markdown
 # KsK Clan Website
-
-![KsK Logo](/images/ksklogo.png)
 
 ## Übersicht
 Die offizielle Website des KsK Gaming Clans. Eine moderne, responsive Website für unsere Gaming-Community mit Fokus auf Call of Duty und eSports.
