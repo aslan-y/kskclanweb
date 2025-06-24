@@ -47,7 +47,7 @@ kskclan-website/
 ## Installation
 1. Repository klonen:
 ```bash
-git clone https://github.com/CyberGameX/kskclan-website.git
+git clone https://github.com/CyberGameX/kskclanweb.git
 ```
 2. Webserver konfigurieren (z.B. Apache, Nginx)
 3. Domain einrichten und SSL-Zertifikat installieren
