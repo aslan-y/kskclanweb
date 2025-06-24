@@ -1,4 +1,3 @@
-```markdown
 # KsK Clan Website
 
 ## Übersicht
@@ -22,7 +21,7 @@ Die offizielle Website des KsK Gaming Clans. Eine moderne, responsive Website f�
 - Strukturierte Daten (Schema.org)
 
 ## Projektstruktur
-```
+
 kskclan-website/
 ├── index.html
 ├── css/
@@ -42,7 +41,7 @@ kskclan-website/
     ├── discord.html
     ├── impressum.html
     └── datenschutz.html
-```
+
 
 ## Installation
 1. Repository klonen:
@@ -78,5 +77,5 @@ git clone https://github.com/CyberGameX/kskclanweb.git
 
 
 ```
-
 Die Dokumentation enthält die wichtigsten Informationen für Entwickler und Administratoren der Website. Sie kann nach Bedarf erweitert oder angepasst werden.
+```
