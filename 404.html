@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Seite nicht gefunden | KsK Clan</title>
+  <meta name="description" content="404 - Diese Seite wurde leider nicht gefunden">
+  <meta property="og:image" content="/images/ksklogo.png">
+
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' discord.gg cdn.prod.website-files.com static.cloudflareinsights.com; script-src 'self' 'unsafe-inline' static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: discord.gg cdn.prod.website-files.com; frame-src discord.gg; connect-src 'self' *.cloudflare.com">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="/images/ksklogo.png" type="image/png">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main.content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* Rest der Styles bleiben gleich */
+    .error-section {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .error-container {
+      background: var(--dark-color);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      text-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .error-message {
+      font-size: 1.2rem;
+      margin: 2rem 0;
+      opacity: 0.9;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+    }
+
+    .primary-button {
+      background: var(--accent-color);
+      color: var(--dark-color);
+    }
+
+    .secondary-button {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-color);
+    }
+
+    .primary-button:hover,
+    .secondary-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .home-icon,
+    .discord-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .error-container {
+        padding: 2rem 1rem;
+      }
+
+      .error-code {
+        font-size: 6rem;
+      }
+
+      .error-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo-container">
+    <a href="index.html" aria-label="Startseite">
+      <img src="/images/ksklogo.png" alt="KsK Logo" class="logo" width="48" height="48">
+    </a>
+  </div>
+</header>
+
+<main class="content">
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <h1>Game Over!</h1>
+    <p class="error-message">
+      Diese Seite wurde leider nicht gefunden.<br>
+      Zeit für einen Respawn!
+    </p>
+    <div class="error-actions">
+      <a href="index.html" class="primary-button">
+        <svg class="home-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+          <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        </svg>
+        Zurück zur Basis
+      </a>
+      <a href="https://discord.gg/B796EjgGhU" class="secondary-button">
+        <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d7f4ef6498ac018f2c55_Symbol.svg"
+             alt="Discord"
+             class="discord-icon">
+        Join Discord
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <span>&copy; 2025 KsK Clan</span>
+    <nav aria-label="Footer">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

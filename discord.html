@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord | KsK Clan</title>
+    <meta name="description" content="Willkommen beim KsK Clan – Gaming, Turniere und Community.">
+
+    <!-- Open Graph Meta-Tags für bessere Social Media Darstellung -->
+    <meta property="og:title" content="KsK Clan – Gaming, Turniere und Community">
+    <meta property="og:description" content="Erlebe den KsK Clan hautnah – werde Teil unserer Gemeinschaft!">
+    <meta property="og:image" content="/images/kskbanner.png">
+    <meta property="og:url" content="https://kskclan.org">
+    <meta property="og:type" content="website">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' discord.gg cdn.prod.website-files.com static.cloudflareinsights.com; script-src 'self' 'unsafe-inline' static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: discord.gg cdn.prod.website-files.com; frame-src discord.gg; connect-src 'self' *.cloudflare.com">
+
+
+    <!-- Preload für verbessertes Ladeverhalten -->
+    <link rel="preload" as="image" href="/images/kskbanner.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/images/ksklogo.png" type="image/png">
+
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <a href="index.html" aria-label="Startseite">
+            <img src="/images/ksklogo.png" alt="KsK Logo" class="logo" width="48" height="48" loading="lazy">
+        </a>
+    </div>
+    <button id="menuButton" aria-controls="navigation-menu" aria-expanded="false" aria-label="Menü">
+        <div class="menu-icon">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 4h24v2H0M0 11h14v2H0M0 18h20v2H0z"></path>
+            </svg>
+        </div>
+        <span class="menu-text">Menü</span>
+    </button>
+</header>
+
+<nav id="navigation-menu" aria-hidden="true" aria-label="Hauptmenü">
+    <div class="menu-container">
+        <button id="closeMenu" aria-label="Menü schließen">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="m21.474 3.467-.942-.941L12 11.059 3.466 2.526l-.941.941L11.059 12l-8.533 8.533.941.942L12 12.941l8.532 8.533.942-.941L12.941 12z"></path>
+            </svg>
+            <span>Schließen</span>
+        </button>
+        <ul class="menu-list">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="teams.html">Teams</a></li>
+            <li><a href="turniere.html">Turniere</a></li>
+            <li><a href="mitglieder.html" class="active">Mitglieder</a></li>
+            <li><a href="recruitment.html">Bewerbung</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="discord.html" class="highlight">Discord</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="content">
+        <section id="discord-intro">
+            <h1>Unser Discord Server</h1>
+            <p>Der zentrale Treffpunkt für unsere Gaming-Community</p>
+        </section>
+
+        <!-- Text Channels Section -->
+        <section class="channel-section text-channels">
+            <h2>Text Channels</h2>
+            <div class="overview-image">
+                <img src="/images/discord-channels.png" alt="Übersicht Text Channels" loading="lazy">
+            </div>
+            <div class="channel-dropdown">
+                <select id="dropdown-text-channels" onchange="toggleChannel('text', this.value)">
+                    <option value="">-- Bitte wähle einen Text Channel --</option>
+                    <option value="regeln">📜 Regeln</option>
+                    <option value="clan-rollen">👑 Clan-rollen</option>
+                    <option value="events">🎮 Events</option>
+                    <option value="chat">💬 Chat</option>
+                    <option value="desbl">🎯 DESBL</option>
+                    <option value="bot-commands">🤖 Bot Commands</option>
+                    <option value="ticket-oeffnen">🎫 Ticket Öffnen</option>
+                    <option value="bunker-codes">🔑 Bunker Codes</option>
+                    <option value="easter-eggs">🥚 Easter Eggs</option>
+                    <option value="clips">🎥 Clips</option>
+                </select>
+            </div>
+            <div class="channel-details" id="text-channel-details">
+                <div class="default-info">Bitte wähle einen Text Channel aus, um Details zu sehen.</div>
+                <div id="regeln" class="channel-info">
+                    <p>Wichtige Server- und Community-Richtlinien.</p>
+                </div>
+                <div id="clan-rollen" class="channel-info">
+                    <p>Übersicht und Vergabe der Clan-Ränge.</p>
+                </div>
+                <div id="events" class="channel-info">
+                    <p>Ankündigungen für Turniere und Community-Events.</p>
+                </div>
+                <div id="chat" class="channel-info">
+                    <p>Allgemeiner Chat für Clan-Mitglieder.</p>
+                </div>
+                <div id="desbl" class="channel-info">
+                    <p>Updates und Infos zur DESBL-Liga.</p>
+                </div>
+                <div id="bot-commands" class="channel-info">
+                    <p>Hier könnt ihr die Bots benutzen.</p>
+                </div>
+                <div id="ticket-oeffnen" class="channel-info">
+                    <p>Falls ihr Hilfe braucht, könnt ihr hier ein Ticket öffnen.</p>
+                </div>
+                <div id="bunker-codes" class="channel-info">
+                    <p>Hier sind die Bunker Codes von Warzone.</p>
+                </div>
+                <div id="easter-eggs" class="channel-info">
+                    <p>Hier wird alles um das Thema Easter Eggs gesprochen.</p>
+                </div>
+                <div id="clips" class="channel-info">
+                    <p>Eure besten Gaming-Momente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Channels Section -->
+        <section class="channel-section voice-channels">
+            <h2>Voice Channels</h2>
+            <div class="overview-image">
+                <img src="/images/talk-channels-discord.png" alt="Übersicht Voice Channels" loading="lazy">
+            </div>
+            <div class="channel-dropdown">
+                <select id="dropdown-voice-channels" onchange="toggleChannel('voice', this.value)">
+                    <option value="">-- Bitte wähle einen Voice Channel --</option>
+                    <option value="task-force">🎮 Task Force 141</option>
+                    <option value="warzone-br">🎯 Warzone BR</option>
+                    <option value="multiplayer">🎲 Multiplayer</option>
+                </select>
+            </div>
+            <div class="channel-details" id="voice-channel-details">
+                <div class="default-info">Bitte wähle einen Voice Channel aus, um Details zu sehen.</div>
+                <div id="task-force" class="channel-info">
+                    <p>Hauptkanal für Clan-Besprechungen und Strategie.</p>
+                </div>
+                <div id="warzone-br" class="channel-info">
+                    <p>Battle Royale Squad Channels:</p>
+                    <ul>
+                        <li>Alpha WZ: Primäres Warzone Squad (0/4)</li>
+                        <li>Bravo WZ: Sekundäres Warzone Squad (0/4)</li>
+                    </ul>
+                </div>
+                <div id="multiplayer" class="channel-info">
+                    <p>Multiplayer Team Channels:</p>
+                    <ul>
+                        <li>Alpha MP: Primäres Multiplayer Squad (0/7)</li>
+                        <li>Bravo MP: Sekundäres Multiplayer Squad (0/4)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <span>&copy; 2025 KsK Clan</span>
+        </div>
+
+        <nav class="footer-center" aria-label="Footer Navigation">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+
+        <div class="footer-right">
+            <a href="https://discord.gg/B796EjgGhU" class="social-link discord">
+                <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d7f4ef6498ac018f2c55_Symbol.svg"
+                     alt="Discord"
+                     width="24"
+                     height="24">
+            </a>
+            <a href="https://x.com/OfficialKsKClan" class="social-link X">
+                <img src="/images/x-logo.png"
+                     alt="X"
+                     width="24"
+                     height="24">
+            </a>
+            <a href="https://www.instagram.com/officialkskclan/" class="social-link instagram">
+                <img src="/images/instagram_icon.png"
+                     alt="Instagram"
+                     width="24"
+                     height="24">
+            </a>
+            <a href="https://www.youtube.com/@Official_KsK_Clan" class="social-link youtube">
+                <img src="/images/yt-icon.png"
+                     alt="YouTube"
+                     width="24"
+                     height="24">
+            </a>
+            <a href="https://www.twitch.tv/officialkskclan" class="social-link twitch">
+                <img src="/images/twitch-icon.jpg"
+                     alt="Twitch"
+                     width="24"
+                     height="24">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

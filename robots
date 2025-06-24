@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /private/
+
+# Sitemap Location
+Sitemap: https://kskclan.net/sitemap.xml
+
+# Crawl-delay für bessere Serverperformance
+Crawl-delay: 10
+
+# Host-Directive für bevorzugte Domain
+Host: kskclan.net
